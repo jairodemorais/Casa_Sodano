@@ -1,0 +1,417 @@
+*{
+margin:0px;
+padding:0px
+}
+img{border:0px}
+html{
+width:100%;
+padding:10px 0 10px 0;
+}
+body{
+width:746px;
+margin:auto;
+}
+#header{
+background-color:#E9E9E9;
+float:left;
+font-family:Tahoma;
+font-size:11px;
+color:#585858;
+height:71px;
+margin:0 0 4px 0
+}
+#header img{
+float:left
+}
+.lang{
+float:left;
+width:112px;
+margin:10px 0 0 0;
+padding:9px 20px 7px 60px;
+border-right:1px solid #BABABA
+}
+.lang img{
+padding:3px 0 3px 0;
+margin:5px 0 0 0
+}
+#header .center{
+padding:3px 9px 3px 10px;
+margin:5px 10px 0 9px;
+border-left:1px solid #BDBDBD;
+border-right:1px solid #BDBDBD;
+}
+.cur{
+float:left;
+width:100px;
+margin:10px 0 0 0;
+padding:9px 20px 7px 21px;
+border-right:1px solid #BABABA
+}
+.cur select{
+width:101px;
+height:17px;
+float:left;
+border:1px solid #6E6E6E;
+margin:7px 0 0 0;
+font-family:Tahoma;
+font-size:10px;
+color:#6E6E6E;
+font-weight:bold;
+padding:1px 0 0 4px;
+}
+.cart{
+float:left;
+width:123px;
+margin:10px 0 0 0;
+padding:9px 28px 7px 20px;
+background-image:url(cart.gif);
+background-position:20px 4px;
+background-repeat:no-repeat
+}
+.cart strong{
+margin:0 0 10px 34px;
+float:left
+}
+.cart font{
+color:#C30205;
+font-weight:bold;
+font-size:11px
+}
+#menu{
+float:left;
+}
+#menu li, #menu li img{
+list-style-type:none;
+float:left
+}
+#content{
+float:left;
+margin:4px 0 0 0;
+width:746px;
+}
+#left{
+float:left;
+width:192px;
+}
+#left h2{
+font-family:Tahoma;
+font-size:11px;
+color:#4F4D4D;
+width:192px;
+background-color:#EBE0DB;
+display:block;
+text-align:center;
+padding:12px 0 12px 0
+}
+.leftnav{
+display:block;
+float:left;
+width:172px;
+padding:10px 10px 10px 10px;
+margin:0 0 4px 0;
+background-color:#F5EBE7
+}
+.leftnav li{
+list-style-type:none;
+float:left;
+width:137px;
+height:16px;
+display:block;
+background-image:url(arrows.gif);
+background-position:10px 8px;
+background-repeat:no-repeat;
+padding:4px 0 0 35px;
+border-bottom:1px solid #EBE0DB
+}
+.leftnav li a{
+display:block;
+float:left;
+font-family:Tahoma;
+font-size:11px;
+color:#000000;
+text-decoration:none
+}
+#left .bord{
+border-bottom:0px
+}
+.block1{
+width:192px;
+height:157px;
+float:left
+}
+.block1 a{
+font-family:Tahoma;
+font-size:11px; 
+font-weight:bold;
+color:#FFFFFF;
+display:block;
+text-decoration:underline
+}
+.block1 a:visited, .block2 a:visited, .block3 a:visited {text-decoration:underline}
+.block1 a:hover, .block2 a:hover, .block3 a:hover  {text-decoration:none}
+#right{
+float:left;
+margin:0 0 0 4px;
+width:550px;
+}
+.block2{
+background-image:url(pic2.jpg);
+background-position:top left;
+background-repeat:no-repeat;
+width:214px;
+height:151px;
+float:left
+}
+.block2 a{
+font-family:Tahoma;
+font-size:11px; 
+font-weight:bold;
+color:#E3010F;
+margin:101px 0 0 26px;
+display:block;
+text-decoration:underline
+}
+.block3{
+background-image:url(pic3.jpg);
+background-position:top left;
+background-repeat:no-repeat;
+width:332px;
+height:151px;
+float:left;
+margin:0 0 0 3px;
+display:inline
+}
+.block3 a{
+font-family:Tahoma;
+font-size:11px; 
+font-weight:bold;
+color:#FFFFFF;
+margin:116px 0 0 22px;
+display:block;
+text-decoration:underline
+}
+.items{
+float:left;
+margin:5px 0 0 0;
+display:inline;
+width:376px;
+}
+.item{
+float:left;
+height:200px;
+border:4px solid #E5E5E5;
+font-family:Tahoma;
+font-size:11px;
+color:#6E6E6E;
+font-weight:bold;
+margin:0 2px 3px 0;
+display:inline
+}
+.item h3{
+display:block;
+font-family:Tahoma;
+font-size:12px;
+color:#595959;
+width:171px;
+background-color:#E5E5E5;
+padding:15px 0 15px 7px
+}
+.item img{
+float:left;
+margin-top: 20px;
+}
+.item p{
+float:left;
+width:80px;
+margin:10px 0 0 0;
+padding:10px 0 4px 8px;
+border-left:2px solid #E9DBDB
+}
+.item span{
+display:block;
+float:left;
+margin:15px 0 10px 0;
+color:#6DB200;
+font-size:18px
+}
+.item a{
+display:block;
+float:left;
+clear:both;
+width:66px;
+padding:0 0 6px 0;
+text-decoration:underline;
+color:#6E6E6E
+}
+#right .red{
+color:#F02400
+}
+.news{
+background-image:url(title.gif);
+background-position:top left;
+background-repeat:no-repeat;
+float:left;
+width:173px;
+margin:5px 0 4px 0;
+padding:60px 0 7px 0;
+background-color:#ECDDCE;
+color:#454545;
+font-family:Tahoma;
+font-size:11px;
+text-align: center;
+}
+.news p{
+padding:0 0 15px 10px;
+width:150px;
+text-align: left;
+}
+.news p input{
+  margin-top: 5px;
+}
+.news span{
+font-family:Tahoma;
+font-size:11px;
+color:#454545;
+text-decoration:underline;
+font-weight:bold
+}
+.news a{
+display:inline;
+padding:0 0 0 5px
+}
+#right .read{
+font-family:Tahoma;
+font-size:10px;
+font-weight:bold;
+color:#454545;
+background-image:url(arrows2.gif);
+background-position:right 5px;
+background-repeat:no-repeat;
+display:block;
+width:70px;
+text-decoration:none
+}
+.new{
+float:left;
+width:173px;
+text-align:center;
+font-family:Tahoma;
+font-size:11px;
+color:#010101;
+}
+.new span{
+color:#FE4400;
+font-size:14px;
+display:block;
+font-weight:bold;
+padding:2px 0 0 0
+}
+.new img{
+  margin-bottom: 5px;
+}
+#footer{
+float:left;
+margin:4px 0 0 0;
+padding:10px 0 0 0;
+background-color:#E7E3D8;
+height:59px;
+width:100%;
+}
+.pay{
+margin:12px 50px 0 13px;
+float:left
+}
+.copy{
+float:left;
+color:#626262;
+font-family:Tahoma;
+font-size:11px;
+font-weight:bold;
+width: 500px;
+}
+.copy p{
+width:500px;
+text-align:center
+}
+.botmenu{
+display:block;
+float:left;
+width:450px;
+padding:10px 0 5px 35px
+}
+.botmenu li{
+float:left;
+list-style-type:none;
+padding:0 10px 0 10px;
+background-image:url(dots.gif);
+background-position:top right;
+background-repeat:no-repeat;
+}
+.botmenu a{
+color:#807F7F;
+text-decoration:none;
+float:left;
+}
+#footer .back{
+background-image:none;
+width:90px;
+}
+#footer p{
+float:left
+}
+#footer p a{
+color:#626262;
+text-decoration:none
+}
+#footer p .under{
+text-decoration:underline
+}
+#content .inner_copy {border:0;color:#f00;float:left;width:50%!important;margin:-202px 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:12px}
+/*SLIDER */
+#s3slider { 
+   width: 546px; /* important to be same as image width */ 
+   height: 151px; /* important to be same as image height */
+   position: relative; /* important */
+   overflow: hidden; /* important */
+   margin-bottom: 10px;
+}
+
+#s3sliderContent {
+   width: 546px; /* important to be same as image width or wider */
+   position: absolute; /* important */
+   top: 0; /* important */
+   margin-left: 0; /* important */
+}
+
+.s3sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.s3sliderImage span {
+   position: absolute; /* important */
+   left: 0;
+   font: 10px/15px Arial, Helvetica, sans-serif;
+   padding: 10px 13px;
+   width: 546px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   display: none; /* important */
+   top: 0;
+
+   /*
+       if you put
+       top: 0; -> the box with text will be shown at the top of the image 
+       if you put
+       bottom: 0; -> the box with text will be shown at the bottom of the image
+   */
+}
+
+.clear {
+   clear: both;
+}

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  quantity: 1
+  price: 1.5
+  cart: 
+
+two:
+  quantity: 1
+  price: 1.5
+  cart: 

@@ -1,0 +1,20 @@
+<div class="items">
+	<% @items.each do |item| %>
+	<div class="item">
+		<h3><%=item.title%></h3>
+		<img src=<%="assets/#{item.image_url}"%> alt="" width="85" height="100" />
+		<p>
+			<%=item.description%> 
+			<span><%= number_to_currency(item.price, :separator => ",", :delimiter => "") %></span>
+			<a href="#" class="red">Detalle</a>
+			<% if user_signed_in? %>
+				<a href="#" onclick="addToCart(<%=item.id%>);">Add to cart</a>
+			<%end%>
+		</p>
+	</div>
+	<% end %>
+</div>
+		
+<% if session[:login] == 1 %>
+	<%= link_to 'New Item', new_item_path %>
+<% end %>

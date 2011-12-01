@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>
+	Item: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style' %>
+	<%= javascript_include_tag 'jquery-1.7.min'%>
+	<%= javascript_include_tag 'cart'%>
+	<%= javascript_include_tag 'item'%>
+	<%= javascript_include_tag 'photoSlider'%>
+	<script>
+		$(document).ready(function() { 
+		   $('#s3slider').s3Slider({ 
+		      timeOut: 4000 
+		   });
+		});
+	</script>
+</head>
+<body>
+	<div id="header">
+		<img src="/assets/logo.jpg" alt="Sodano" width="239" height="71" border="0"/>
+		<div class="lang">
+			<strong>Idioma:</strong><br />
+			<a href="#"><img src="assets/lang1.gif" alt="" width="20" height="13" /></a>
+			<a href="#"><img src="assets/lang2.gif" alt="" width="20" height="13" class="center" /></a>
+			<a href="#"><img src="assets/lang3.gif" alt="" width="20" height="13" /></a>
+		</div>	
+		<div class="cur">
+			<strong>Monedas :</strong>
+			<select>
+				<option>Pesos</option>
+				<option>Dolares</option>
+				<option>Euros</option>
+			</select>
+		</div>
+		<div class="cart">
+			<strong>Carrito de Compras</strong><br /> <span>productos agregdos: <font><%= @cart_quantity%></font></span>
+		</div>
+	</div>
+	<ul id="menu">
+		<li><a href="/items/index"><img src="assets/but1.gif" alt="" width="149" height="60" /></a></li>
+		<li><a href="/sites/about"><img src="assets/but2.gif" alt="" width="149" height="60" /></a></li>
+		<li><a href="/sites/contact"><img src="assets/but3.gif" alt="" width="149" height="60" /></a></li>
+		<% if !user_signed_in? %>
+			<li><a href="/sites/contact"><img src="assets/but4.gif" alt="" width="149" height="60" /></a></li>
+			<li><a href="/sites/contact"><img src="assets/but6.gif" alt="" width="149" height="60" /></a></li>
+		<% else %>
+			<li><a href="/sites/contact"><img src="assets/but5.gif" alt="" width="149" height="60" /></a></li>
+		<% end %>
+	</ul>
+	<div id="content">
+		<div id="left">
+			<h2>BUSCAR POR CATEGORIAS:</h2>
+			<ul class="leftnav">
+				<li><a href="/items?category_id=1">Dormitorio</a></li>
+				<li><a href="/items?category_id=2">Cocina</a></li>
+				<li><a href="/items?category_id=3">Banio</a></li>
+				<li><a href="/items?category_id=4">Tecnologia</a></li>
+				<li><a href="/items?category_id=5">Living</a></li>
+				<li class="bord"><a href="/items?category_id=6">Jardin</a></li>
+			</ul>
+			<div class="block1">
+			<iframe width="192" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=58.425119,114.082031&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;t=m&amp;ll=-34.740555,-58.267193&amp;spn=0.024686,0.016479&amp;z=14&amp;output=embed"></iframe><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=58.425119,114.082031&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;t=m&amp;ll=-34.740555,-58.267193&amp;spn=0.024686,0.016479&amp;z=14" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
+			</div>
+		</div>
+		<div id="right">
+			<div id="s3slider">
+			   <ul id="s3sliderContent">
+			      <li class="s3sliderImage">
+			          <img src="http://www.informabtl.com/wp-content/uploads/2011/03/Whopper-promociones-Burger-King.jpg" width="546" height='151'/>
+			          <span>PROMOCION: la hambuerguesa piola piola piola</span>
+			      </li>
+			      <li class="s3sliderImage">
+			          <img src="http://www.vallesgrijalva.com/images/DESCUENTOcupon1.jpg" width="546" height='151'/>
+			          <span>Meta chapa: vamos las chiapas!</span>
+			      </li>
+			      <div class="clear s3sliderImage"></div>
+			   </ul>
+			</div>
+			<%= yield %>
+			<div class="news">
+				<p>
+ 					<b>Suscribase para recibir las ofertas.</b>
+					<input type="text" id="email" value="email">
+					<a href="#"><img src="assets/arrows2.gif" alt="" width="11" height="5" /></a>
+				</p>
+				
+				<h3>Seguinos en: </h3>
+				<p>
+					<div><a href="#"><img src="assets/facebook.png" alt="" width="50" height="50" /></a></div>
+					<div><a href="#"><img src="assets/twitter.png" alt="" width="50" height="50" /></a></div>
+				</p>
+			</div>
+			<div class="new">
+				<img src="assets/title2.gif" alt="" width="173" height="41" />
+				<img src="assets/telefono.gif" height="40" width="40" title="Venta Telefonica" alt="Venta Telefonica" />
+				<h3>(011) 4280-6034</h3> 
+				<span>Consultas, Ventas, Listas de casamiento.</span>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="pay">
+			<a href="#"><img src="assets/small1.jpg" alt="" width="80" height="26" /></a>
+			<a href="#"><img src="assets/small2.jpg" alt="" width="39" height="26" /></a>
+			<a href="#"><img src="assets/small3.jpg" alt="" width="39" height="26" /></a>
+		</div>
+		<div class="copy">
+			<ul class="botmenu">
+				<li><a href="#">Buscar</a></li>
+				<li><a href="#">Contactenos</a></li>
+				<li><a href="#">Registrese</a></li>
+				<li class="back"><a href="#">Login</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
