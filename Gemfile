@@ -17,7 +17,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'pg'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -26,6 +25,10 @@ gem 'pg'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :production do
+  gem 'therubyracer', '~> 0.9.3.beta1'
+end
 
 group :test do
   # Pretty printed test output
