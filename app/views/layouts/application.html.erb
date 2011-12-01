@@ -7,10 +7,10 @@
   <title>
 	Item: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'style' %>
-	<script type="text/javascript" src="/assets/javascripts/jquery-1.7.min.js" > </script>
-	<script type="text/javascript" src="/assets/javascripts/cart.js"></script>
-	<script type="text/javascript" src="/assets/javascripts/item"></script>
-	<script type="text/javascript" src="/assets/javascripts/photoSlider"></script>
+	<%= javascript_include_tag 'jquery-1.7.min'%>
+	<%= javascript_include_tag 'cart'%>
+	<%= javascript_include_tag 'item'%>
+	<%= javascript_include_tag 'photoSlider'%>
 	<script>
 		$(document).ready(function() { 
 		   $('#s3slider').s3Slider({ 
