@@ -154,6 +154,9 @@ float:left;
 margin:0 0 0 4px;
 width:550px;
 }
+#right .content{
+  width: 375px;
+} 
 .block2{
 background-image:url(pic2.jpg);
 background-position:top left;
@@ -192,7 +195,6 @@ text-decoration:underline
 }
 .items{
 float:left;
-margin:5px 0 0 0;
 display:inline;
 width:376px;
 }
@@ -252,7 +254,7 @@ background-position:top left;
 background-repeat:no-repeat;
 float:left;
 width:173px;
-margin:5px 0 4px 0;
+margin: 0px 0 4px 0;
 padding:60px 0 7px 0;
 background-color:#ECDDCE;
 color:#454545;
@@ -369,7 +371,7 @@ text-decoration:underline
 #content .inner_copy {border:0;color:#f00;float:left;width:50%!important;margin:-202px 0 0 0;overflow:hidden;line-height:0;padding:0;font-size:12px}
 /*SLIDER */
 #s3slider { 
-   width: 546px; /* important to be same as image width */ 
+   width: 549px; /* important to be same as image width */ 
    height: 151px; /* important to be same as image height */
    position: relative; /* important */
    overflow: hidden; /* important */
@@ -377,7 +379,7 @@ text-decoration:underline
 }
 
 #s3sliderContent {
-   width: 546px; /* important to be same as image width or wider */
+   width: 549px; /* important to be same as image width or wider */
    position: absolute; /* important */
    top: 0; /* important */
    margin-left: 0; /* important */
@@ -394,7 +396,7 @@ text-decoration:underline
    left: 0;
    font: 10px/15px Arial, Helvetica, sans-serif;
    padding: 10px 13px;
-   width: 546px;
+   width: 549px;
    background-color: #000;
    filter: alpha(opacity=70); /* here you can set the opacity of box with text */
    -moz-opacity: 0.7; /* here you can set the opacity of box with text */
@@ -402,7 +404,7 @@ text-decoration:underline
    opacity: 0.7; /* here you can set the opacity of box with text */
    color: #fff;
    display: none; /* important */
-   top: 0;
+   bottom: 0;
 
    /*
        if you put

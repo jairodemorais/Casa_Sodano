@@ -24,9 +24,9 @@
 		<img src="/assets/logo.jpg" alt="Sodano" width="239" height="71" border="0"/>
 		<div class="lang">
 			<strong>Idioma:</strong><br />
-			<a href="#"><img src="assets/lang1.gif" alt="" width="20" height="13" /></a>
-			<a href="#"><img src="assets/lang2.gif" alt="" width="20" height="13" class="center" /></a>
-			<a href="#"><img src="assets/lang3.gif" alt="" width="20" height="13" /></a>
+			<a href="#"><img src="/assets/lang1.gif" alt="" width="20" height="13" /></a>
+			<a href="#"><img src="/assets/lang2.gif" alt="" width="20" height="13" class="center" /></a>
+			<a href="#"><img src="/assets/lang3.gif" alt="" width="20" height="13" /></a>
 		</div>	
 		<div class="cur">
 			<strong>Monedas :</strong>
@@ -41,14 +41,15 @@
 		</div>
 	</div>
 	<ul id="menu">
-		<li><a href="/items/index"><img src="assets/but1.gif" alt="" width="149" height="60" /></a></li>
-		<li><a href="/sites/about"><img src="assets/but2.gif" alt="" width="149" height="60" /></a></li>
-		<li><a href="/sites/contact"><img src="assets/but3.gif" alt="" width="149" height="60" /></a></li>
+		<li><a href="/items"><img src="/assets/but1.gif" alt="" width="149" height="60" /></a></li>
+		<li><a href="/sites/about"><img src="/assets/but2.gif" alt="" width="149" height="60" /></a></li>
+		<li><a href="/sites/contact"><img src="/assets/but3.gif" alt="" width="149" height="60" /></a></li>
 		<% if !user_signed_in? %>
-			<li><a href="/sites/contact"><img src="assets/but4.gif" alt="" width="149" height="60" /></a></li>
-			<li><a href="/sites/contact"><img src="assets/but6.gif" alt="" width="149" height="60" /></a></li>
+			<li><a href="/users/sign_up"><img src="/assets/but4.gif" alt="" width="149" height="60" /></a></li>
+			<li><a href="/users/sign_in"><img src="/assets/but6.gif" alt="" width="149" height="60" /></a></li>
 		<% else %>
-			<li><a href="/sites/contact"><img src="assets/but5.gif" alt="" width="149" height="60" /></a></li>
+			<li><a href="/carts"><img src="/assets/but5.gif" alt="" width="149" height="60" /></a></li>
+			<li><a href="#"><img src="/assets/but.gif" alt="" width="149" height="60" /></a></li>
 		<% end %>
 	</ul>
 	<div id="content">
@@ -70,17 +71,23 @@
 			<div id="s3slider">
 			   <ul id="s3sliderContent">
 			      <li class="s3sliderImage">
-			          <img src="http://www.informabtl.com/wp-content/uploads/2011/03/Whopper-promociones-Burger-King.jpg" width="546" height='151'/>
-			          <span>PROMOCION: la hambuerguesa piola piola piola</span>
+			          <img src="/assets/promo1.jpg" width="549" height='151'/>
+			          <span>Promoción valida hasta el 21/12/2011</span>
 			      </li>
 			      <li class="s3sliderImage">
-			          <img src="http://www.vallesgrijalva.com/images/DESCUENTOcupon1.jpg" width="546" height='151'/>
-			          <span>Meta chapa: vamos las chiapas!</span>
+			          <img src="/assets/promo2.png" width="549" height='151'/>
+			          <span>Promoción valida hasta el 21/12/2011</span>
+			      </li>
+						<li class="s3sliderImage">
+			          <img src="/assets/promo3.jpg" width="549" height='151'/>
+			          <span>Promoción valida hasta el 21/12/2011</span>
 			      </li>
 			      <div class="clear s3sliderImage"></div>
 			   </ul>
 			</div>
+			<div class="content">
 			<%= yield %>
+			</div>
 			<div class="news">
 				<p>
  					<b>Suscribase para recibir las ofertas.</b>
