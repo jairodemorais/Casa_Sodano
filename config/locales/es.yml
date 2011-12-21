@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+es:
+  find_by_categories: "BUSCAR POR CATEGORIA"
+  our_location: "NUESTRA UBICACION"
+  suscribe_newsletter: "Suscribase para recibir nuestras promociones"
+  follow_us: "Seguinos en"
+  home: "Inicio"
+  contact_us: "Contactenos"
+  about_us: "Conozcanos"
+  shopping_cart: "Mi carrito"

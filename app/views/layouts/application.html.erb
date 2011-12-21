@@ -18,43 +18,49 @@
 		   });
 		});
 	</script>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div id="header">
-		<img src="/assets/logo.jpg" alt="Sodano" width="239" height="71" border="0"/>
-		<div class="lang">
-			<strong>Idioma:</strong><br />
-			<a href="#"><img src="/assets/lang1.gif" alt="" width="20" height="13" /></a>
-			<a href="#"><img src="/assets/lang2.gif" alt="" width="20" height="13" class="center" /></a>
-			<a href="#"><img src="/assets/lang3.gif" alt="" width="20" height="13" /></a>
-		</div>	
-		<div class="cur">
-			<strong>Monedas :</strong>
-			<select>
-				<option>Pesos</option>
-				<option>Dolares</option>
-				<option>Euros</option>
-			</select>
+		<img src="/assets/logo_sodano.png" alt="Sodano" width="150" height="87" border="0" class="logo"/>
+		<div class="title">
+			<div class="bold">La mejor experiencia</div>
+			<div>En articulos para el hogar</div>
 		</div>
+		<div class="lang">
+			<a href="#"><img src="/assets/germany_flag.png" alt="Aleman" width="20" height="20" /></a>
+			<a href="#"><img src="/assets/spain_flag.png" alt="Espana" width="20" height="20" /></a>
+			<a href="#"><img src="/assets/england_flag.png" alt="Inglaterra" width="20" height="20" /></a>
+			<span class="selectedLang">Lenguaje: Espanol</span>
+		</div>	
+	</div>
+	<div id="leftEar"></div>
+	<div id="menuContainer">
+		<ul id="menu">
+	  	<li><%= link_to t(:home), { :controller => "/items", :action => "index" }, :class => "but1_active" -%></li>
+			<li class="pipe">|</li>
+			<li><%= link_to "Conozcanos", { :controller => "/sites", :action => "about" }, :class => "but2" -%></li>
+			<li class="pipe">|</li>
+			<li><%= link_to "Contactenos", { :controller => "/sites", :action => "contact" }, :class => "but3" -%></li>
+			<li class="pipe">|</li>
+			<% if !user_signed_in? %>
+				<li><%= link_to 'Registrese', new_user_registration_path %></li>
+				<li class="pipe">|</li>
+				<li><%= link_to 'Iniciar session', new_user_session_path %></li>
+			<% else %>
+				<li><%= link_to_unless_current "Mi carrito",  :controller => "/carts", :action => "index" %></li>
+			<% end %>
+		</ul>
 		<div class="cart">
-			<strong>Carrito de Compras</strong><br /> <span>productos agregdos: <font><%= @cart_quantity%></font></span>
+			<div class="cartTitle">CARRITO</div>
+			<div class="cartTitle">DE COMPRAS</div> 
+			<div class="cartSubtTitle">Productos agregados: <font><%= @cart_quantity%></font></div>
 		</div>
 	</div>
-	<ul id="menu">
-		<li><a href="/items"><img src="/assets/but1.gif" alt="" width="149" height="60" /></a></li>
-		<li><a href="/sites/about"><img src="/assets/but2.gif" alt="" width="149" height="60" /></a></li>
-		<li><a href="/sites/contact"><img src="/assets/but3.gif" alt="" width="149" height="60" /></a></li>
-		<% if !user_signed_in? %>
-			<li><a href="/users/sign_up"><img src="/assets/but4.gif" alt="" width="149" height="60" /></a></li>
-			<li><a href="/users/sign_in"><img src="/assets/but6.gif" alt="" width="149" height="60" /></a></li>
-		<% else %>
-			<li><a href="/carts"><img src="/assets/but5.gif" alt="" width="149" height="60" /></a></li>
-			<li><a href="#"><img src="/assets/but.gif" alt="" width="149" height="60" /></a></li>
-		<% end %>
-	</ul>
+	<div id="rightEar"></div>
 	<div id="content">
 		<div id="left">
-			<h2>BUSCAR POR CATEGORIAS:</h2>
+			<h2><%=t(:find_by_categories)%></h2>
 			<ul class="leftnav">
 				<li><a href="/items?category_id=1">Dormitorio</a></li>
 				<li><a href="/items?category_id=2">Cocina</a></li>
@@ -64,22 +70,21 @@
 				<li class="bord"><a href="/items?category_id=6">Jardin</a></li>
 			</ul>
 			<div class="block1">
-			<iframe width="192" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=58.425119,114.082031&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;t=m&amp;ll=-34.740555,-58.267193&amp;spn=0.024686,0.016479&amp;z=14&amp;output=embed"></iframe><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=58.425119,114.082031&amp;vpsrc=6&amp;ie=UTF8&amp;hq=&amp;hnear=Triunvirato+1352,+Quilmes,+Buenos+Aires,+Argentina&amp;t=m&amp;ll=-34.740555,-58.267193&amp;spn=0.024686,0.016479&amp;z=14" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
 			</div>
 		</div>
 		<div id="right">
 			<div id="s3slider">
 			   <ul id="s3sliderContent">
 			      <li class="s3sliderImage">
-			          <img src="/assets/promo1.jpg" width="549" height='151'/>
+			          <img src="/assets/carrousel_1.png" width="470" height='230'/>
 			          <span>Promoción valida hasta el 21/12/2011</span>
 			      </li>
 			      <li class="s3sliderImage">
-			          <img src="/assets/promo2.png" width="549" height='151'/>
+			          <img src="/assets/carrousel_2.png" width="470" height='230'/>
 			          <span>Promoción valida hasta el 21/12/2011</span>
 			      </li>
 						<li class="s3sliderImage">
-			          <img src="/assets/promo3.jpg" width="549" height='151'/>
+			          <img src="/assets/carrousel_3.png" width="470" height='230'/>
 			          <span>Promoción valida hasta el 21/12/2011</span>
 			      </li>
 			      <div class="clear s3sliderImage"></div>
@@ -90,12 +95,12 @@
 			</div>
 			<div class="news">
 				<p>
- 					<b>Suscribase para recibir las ofertas.</b>
+ 					<b><%=t(:suscribe_newsletter)%></b>
 					<input type="text" id="email" value="email">
 					<a href="#"><img src="assets/arrows2.gif" alt="" width="11" height="5" /></a>
 				</p>
 				
-				<h3>Seguinos en: </h3>
+				<h3><%=t(:follow_us)%></h3>
 				<p>
 					<div><a href="#"><img src="assets/facebook.png" alt="" width="50" height="50" /></a></div>
 					<div><a href="#"><img src="assets/twitter.png" alt="" width="50" height="50" /></a></div>
