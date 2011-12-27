@@ -2,11 +2,33 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 es:
-  find_by_categories: "BUSCAR POR CATEGORIA"
+  find_by_categories: "Buscar por categoria"
   our_location: "NUESTRA UBICACION"
-  suscribe_newsletter: "Suscribase para recibir nuestras promociones"
-  follow_us: "Seguinos en"
+  suscribe_newsletter: "SUSCRIBASE PARA RECIBIR NUESTRAS PROMOCIONES"
+  follow_us: "Seguinos en:"
   home: "Inicio"
   contact_us: "Contactenos"
   about_us: "Conozcanos"
   shopping_cart: "Mi carrito"
+  register: "Registrese"
+  sign_in: "Inicie session"
+  best_expirience: "La mejor experiencia"
+  home_articles: "En articulos del hogar"
+  cart: "CARRITO"
+  shopping: "DE COMPRAS"
+  product_added: "Productos agregados:"
+  out_door: "Aire Libre"
+  audio: "Audio"
+  kids: "Bebes y niño"
+  kitchen: "Cocina"
+  personal_care: "Cuidado personal"
+  newsletter: "Newsletter"
+  send: "Enviar"
+  articles_title: "Articulos varios"
+  more_info: "+info"
+  add_to_cart: "Comprar"
+  find_us: "Encontranos aca!"
+
+  
+  
+  

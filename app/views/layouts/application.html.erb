@@ -19,18 +19,21 @@
 		});
 	</script>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	<div class="left_shadow"></div>
+	<div class="right_shadow"></div>
 	<div id="header">
 		<img src="/assets/logo_sodano.png" alt="Sodano" width="150" height="87" border="0" class="logo"/>
 		<div class="title">
-			<div class="bold">La mejor experiencia</div>
-			<div>En articulos para el hogar</div>
+			<div class="bold"><%=t(:best_expirience)%></div>
+			<div><%=t(:home_articles)%></div>
 		</div>
 		<div class="lang">
-			<a href="#"><img src="/assets/germany_flag.png" alt="Aleman" width="20" height="20" /></a>
-			<a href="#"><img src="/assets/spain_flag.png" alt="Espana" width="20" height="20" /></a>
-			<a href="#"><img src="/assets/england_flag.png" alt="Inglaterra" width="20" height="20" /></a>
+			<a href="/?locale=gr"><img src="/assets/germany_flag.png" alt="Aleman" width="20" height="20" /></a>
+			<a href="/?locale=es"><img src="/assets/spain_flag.png" alt="Espana" width="20" height="20" /></a>
+			<a href="/?locale=en"><img src="/assets/england_flag.png" alt="Inglaterra" width="20" height="20" /></a>
 			<span class="selectedLang">Lenguaje: Espanol</span>
 		</div>	
 	</div>
@@ -39,22 +42,23 @@
 		<ul id="menu">
 	  	<li><%= link_to t(:home), { :controller => "/items", :action => "index" }, :class => "but1_active" -%></li>
 			<li class="pipe">|</li>
-			<li><%= link_to "Conozcanos", { :controller => "/sites", :action => "about" }, :class => "but2" -%></li>
+			<li><%= link_to t(:about_us), { :controller => "/sites", :action => "about" }, :class => "but2" -%></li>
 			<li class="pipe">|</li>
-			<li><%= link_to "Contactenos", { :controller => "/sites", :action => "contact" }, :class => "but3" -%></li>
+			<li><%= link_to t(:contact_us), { :controller => "/sites", :action => "contact" }, :class => "but3" -%></li>
 			<li class="pipe">|</li>
 			<% if !user_signed_in? %>
-				<li><%= link_to 'Registrese', new_user_registration_path %></li>
+				<li><%= link_to t(:register), new_user_registration_path %></li>
 				<li class="pipe">|</li>
-				<li><%= link_to 'Iniciar session', new_user_session_path %></li>
+				<li><%= link_to t(:sign_in), new_user_session_path %></li>
 			<% else %>
-				<li><%= link_to_unless_current "Mi carrito",  :controller => "/carts", :action => "index" %></li>
+				<li><%= link_to_unless_current t(:shopping_cart),  :controller => "/carts", :action => "index" %></li>
+				<li><%= link_to_unless_current t(:shopping_cart),  :controller => "/carts", :action => "index" %></li>
 			<% end %>
 		</ul>
 		<div class="cart">
-			<div class="cartTitle">CARRITO</div>
-			<div class="cartTitle">DE COMPRAS</div> 
-			<div class="cartSubtTitle">Productos agregados: <font><%= @cart_quantity%></font></div>
+			<div class="cartTitle"><%=t(:cart)%></div>
+			<div class="cartTitle"><%=t(:shopping)%></div> 
+			<div class="cartSubtTitle"><%=t(:product_added)%> <font><%= @cart_quantity%></font></div>
 		</div>
 	</div>
 	<div id="rightEar"></div>
@@ -62,17 +66,27 @@
 		<div id="left">
 			<h2><%=t(:find_by_categories)%></h2>
 			<ul class="leftnav">
-				<li><a href="/items?category_id=1">Dormitorio</a></li>
-				<li><a href="/items?category_id=2">Cocina</a></li>
-				<li><a href="/items?category_id=3">Banio</a></li>
-				<li><a href="/items?category_id=4">Tecnologia</a></li>
-				<li><a href="/items?category_id=5">Living</a></li>
-				<li class="bord"><a href="/items?category_id=6">Jardin</a></li>
+				<li><a href="/items?category_id=1">>><%=t(:out_door)%></a></li>
+				<li><a href="/items?category_id=2">>><%=t(:audio)%></a></li>
+				<li><a href="/items?category_id=3">>><%=t(:kids)%></a></li>
+				<li><a href="/items?category_id=4">>><%=t(:kitchen)%></a></li>
+				<li><a href="/items?category_id=5">>><%=t(:personal_care)%></a></li>
+				<li><a href="/items?category_id=6">>><%=t(:appliances)%></a></li>
+				<li><a href="/items?category_id=7">>><%=t(:electronic)%></a></li>
+				<li><a href="/items?category_id=8">>><%=t(:fitness)%></a></li>
+				<li><a href="/items?category_id=9">>><%=t(:cold_hot)%></a></li>
+				<li><a href="/items?category_id=10">>><%=t(:white_line)%></a></li>
+				<li><a href="/items?category_id=11">>><%=t(:furniture)%></a></li>
+				<li><a href="/items?category_id=12">>><%=t(:music)%></a></li>
+				<li><a href="/items?category_id=13">>><%=t(:wheeled)%></a></li>
+				<li><a href="/items?category_id=14">>><%=t(:telephony)%></a></li>
+				<li><a href="/items?category_id=15">>><%=t(:tv_video)%></a></li>
 			</ul>
 			<div class="block1">
+				<img src="assets/contact_tel.png" height="97" width="150" alt="Llamenos" title="Llamenos">
 			</div>
 		</div>
-		<div id="right">
+		<div id="middle">
 			<div id="s3slider">
 			   <ul id="s3sliderContent">
 			      <li class="s3sliderImage">
@@ -93,40 +107,60 @@
 			<div class="content">
 			<%= yield %>
 			</div>
+		</div>
+		<div id="right">
 			<div class="news">
-				<p>
- 					<b><%=t(:suscribe_newsletter)%></b>
-					<input type="text" id="email" value="email">
-					<a href="#"><img src="assets/arrows2.gif" alt="" width="11" height="5" /></a>
-				</p>
-				
-				<h3><%=t(:follow_us)%></h3>
-				<p>
-					<div><a href="#"><img src="assets/facebook.png" alt="" width="50" height="50" /></a></div>
-					<div><a href="#"><img src="assets/twitter.png" alt="" width="50" height="50" /></a></div>
-				</p>
-			</div>
-			<div class="new">
-				<img src="assets/title2.gif" alt="" width="173" height="41" />
-				<img src="assets/telefono.gif" height="40" width="40" title="Venta Telefonica" alt="Venta Telefonica" />
-				<h3>(011) 4280-6034</h3> 
-				<span>Consultas, Ventas, Listas de casamiento.</span>
+				<div class="facebook">
+					<label class="title"><%=t(:follow_us)%></label>
+				</div>
+				<div class="newsletter">
+					<label class="title"><%=t(:newsletter)%></label>
+ 					<p><%=t(:suscribe_newsletter)%></p>
+					<input type="text" id="email" value="Ingrese su email">
+					<div class="send"><a>>><%=t(:send)%></a></div>
+				</div>
+				<div class="find_us">
+					<label class="title"><%=t(:find_us)%></label>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div id="footer">
-		<div class="pay">
-			<a href="#"><img src="assets/small1.jpg" alt="" width="80" height="26" /></a>
-			<a href="#"><img src="assets/small2.jpg" alt="" width="39" height="26" /></a>
-			<a href="#"><img src="assets/small3.jpg" alt="" width="39" height="26" /></a>
-		</div>
-		<div class="copy">
-			<ul class="botmenu">
-				<li><a href="#">Buscar</a></li>
-				<li><a href="#">Contactenos</a></li>
-				<li><a href="#">Registrese</a></li>
-				<li class="back"><a href="#">Login</a></li>
-			</ul>
+		<ul id="principal_nav">
+			<li><%= link_to t(:home), { :controller => "/items", :action => "index" }, :class => "but1_active" -%></li>
+			<li><%= link_to t(:about_us), { :controller => "/sites", :action => "about" }, :class => "but2" -%></li>
+			<li><%= link_to t(:contact_us), { :controller => "/sites", :action => "contact" }, :class => "but3" -%></li>
+		<% if !user_signed_in? %>
+			<li><%= link_to t(:register), new_user_registration_path %></li>		
+			<li><%= link_to t(:sign_in), new_user_session_path %></li>
+		<% else %>
+			<li><%= link_to_unless_current t(:shopping_cart),  :controller => "/carts", :action => "index" %></li>
+		<% end %>
+		</ul>
+		<ul id="menu_nav_1">
+			<li><a href="/items?category_id=1">>><%=t(:out_door)%></a></li>
+			<li><a href="/items?category_id=2">>><%=t(:audio)%></a></li>
+			<li><a href="/items?category_id=3">>><%=t(:kids)%></a></li>
+			<li><a href="/items?category_id=4">>><%=t(:kitchen)%></a></li>
+			<li><a href="/items?category_id=5">>><%=t(:personal_care)%></a></li>
+			<li><a href="/items?category_id=6">>><%=t(:appliances)%></a></li>
+		</ul>
+		<ul id="menu_nav_1">	
+			<li><a href="/items?category_id=7">>><%=t(:electronic)%></a></li>
+			<li><a href="/items?category_id=8">>><%=t(:fitness)%></a></li>
+			<li><a href="/items?category_id=9">>><%=t(:cold_hot)%></a></li>
+			<li><a href="/items?category_id=10">>><%=t(:white_line)%></a></li>
+			<li><a href="/items?category_id=11">>><%=t(:furniture)%></a></li>
+			<li><a href="/items?category_id=12">>><%=t(:music)%></a></li>
+		</ul>
+		<ul id="menu_nav_1">
+			<li><a href="/items?category_id=13">>><%=t(:wheeled)%></a></li>
+			<li><a href="/items?category_id=14">>><%=t(:telephony)%></a></li>
+			<li><a href="/items?category_id=15">>><%=t(:tv_video)%></a></li>
+		</ul>
+		<div id="follow_us_footer">
+			<label><%=t(:follow_us)%></label>
+			<img src="/assets/facebook_logo.png" alt="facebook" title="facebook" width="92" height="19">
 		</div>
 	</div>
 </body>

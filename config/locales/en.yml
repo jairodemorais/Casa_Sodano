@@ -2,11 +2,19 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  find_by_categories: "FIND BY CATEGORIES"
+  find_by_categories: "Find by categories"
   our_location: "OUR LOCATION"
-  suscribe_newsletter: "Suscribe in order to get our promotions"
-  follow_us: "Follow us"
+  suscribe_newsletter: "SUSCRIBE IN ORDER TO GET OUR PROMOTIONS"
+  follow_us: "Follow us:"
   home: "Home"
   contact_us: "Contact us"
   about_us: "About us"
+  register: "Sign up"
+  sign_in: "Sign in"
   shopping_cart: "My cart"
+  best_expirience: "The best experiences" 
+  home_articles: "In home articles"
+  cart: "SHOPPING"
+  shopping: "CART"
+  product_added: "Products added:"
+
