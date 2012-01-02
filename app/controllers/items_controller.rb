@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
     if params[:category_id]
       @items = Item.by_category params[:category_id]
     else
-      @items = Item.all
+      @items = Item.all.sample(6)
     end
     
     @news = News.all.sample(5)

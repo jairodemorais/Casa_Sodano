@@ -1,4 +1,4 @@
-<%= form_for(@item) do |f| %>
+<%= form_for(@item,:html => { :multipart => true }) do |f| %>
 	<%p f%>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -25,8 +25,8 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :image_url %><br />
-    <%= f.text_field :image_url %>
+    <%= f.label 'Photo' %><br />
+    <%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>

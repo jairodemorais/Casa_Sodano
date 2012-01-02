@@ -1,2 +1,16 @@
-<h1>Site#contact</h1>
-<p>Find me in app/views/site/contact.html.erb</p>
+<div class="header"><%=t(:contact_us)%></div>
+<p class="description"><%=t(:contact_us_desc)%></p>
+<table>
+	<tr>
+		<td><label><%=t(:email)%></label></td>
+		<td><input type="text" id="email"></input></td>
+	</tr>
+	<tr>
+		<td><label><%=t(:message)%></label></td>
+		<td><textarea id="message" rows="10" cols="56"></textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" id="send" value="<%=t(:send)%>" class="send"></input></td>
+	</tr>
+</table>

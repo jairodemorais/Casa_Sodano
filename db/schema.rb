@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107182254) do
+ActiveRecord::Schema.define(:version => 20111227151324) do
 
   create_table "cart_items", :force => true do |t|
     t.integer  "quantity"
@@ -40,10 +40,12 @@ ActiveRecord::Schema.define(:version => 20111107182254) do
     t.string   "title"
     t.text     "description"
     t.decimal  "price"
-    t.string   "image_url"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
   end
 
   create_table "news", :force => true do |t|

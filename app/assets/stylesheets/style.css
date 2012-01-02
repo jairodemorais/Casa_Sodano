@@ -11,12 +11,27 @@ a, a:visited, a:link, a:hover{
 html{
 width:100%;
 }
+.content{
+  color:#333;
+}
+.description, table{
+  font-size: 12px;
+  font-style: normal;
+  float:left;
+  margin-top: 5px;
+}
+.send{
+  float:right;
+}
 body{
 width:870px;
 margin:auto;
 color:white;
 font-family: 'PT Sans', sans-serif;
 font-style:italic;
+}
+#content form{
+  color: #333;
 }
 #header{
 background: url(background_header.png) repeat-x;
@@ -154,6 +169,7 @@ font-size:12px;
 color:#333;
 text-decoration:none;
 font-style: normal;
+cursor: pointer;
 }
 #left .bord{
 border-bottom:0px;
@@ -269,6 +285,7 @@ border-right: 1px solid #999;
   text-align: left;
   padding-left:10px;
   float: right;
+  cursor: pointer;
 }
 .item{
 font-family: 'PT Sans Narrow', sans-serif;
