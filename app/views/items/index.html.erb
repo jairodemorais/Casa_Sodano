@@ -7,8 +7,8 @@
 	<div class="item <%=(index+1) % 3 != 0 ? "border": "" %>">
 		<div class="title"><%= item.title.upcase%></div>
 		<div class="code">Cod > <%=item.id%></div>
-		<%if item.photo.exists? then %>
-			<%= image_tag item.photo.url(:medium), :height => '100', :width => '110' %>
+		<%if true then %>
+			<img src="assets/products/<%=item.url_image%>" height="100" width="110" />
 		<% else %>
 			no photo 
 		<% end %>

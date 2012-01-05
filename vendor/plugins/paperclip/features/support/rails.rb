@@ -5,6 +5,9 @@ ORIGINAL_BUNDLE_VARS = Hash[ENV.select{ |key,value| BUNDLE_ENV_VARS.include?(key
 
 ENV['RAILS_ENV'] = 'test'
 
+ENV['S3_KEY'] = 'AKIAJOGDRRPGOZYXY2TQ'
+ENV['S3_SECRET'] = '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'
+
 Before do
   ENV['BUNDLE_GEMFILE'] = File.join(Dir.pwd, ENV['BUNDLE_GEMFILE']) unless ENV['BUNDLE_GEMFILE'].start_with?(Dir.pwd)
   @framework_version = nil

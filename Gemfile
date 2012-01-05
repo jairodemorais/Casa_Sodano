@@ -7,6 +7,8 @@ gem 'rails', '3.1.0'
 
 gem 'devise'
 gem 'cocaine'
+gem "paperclip", "~> 2.0"
+gem 'aws-s3'
 
 # Gems used only for assets and not required
 # in production environments by default.

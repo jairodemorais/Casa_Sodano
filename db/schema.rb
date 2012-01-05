@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20111227151324) do
     t.text     "description"
     t.decimal  "price"
     t.integer  "category_id"
+    t.text     "url_image"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
