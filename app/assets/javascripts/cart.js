@@ -8,8 +8,8 @@ function addToCart(itemId){
     success: function(){
       $('#cartQuantity').text(parseInt($('#cartQuantity').text())+1);
     },
-    error: function(){
-      alert("error");
+    error: function(error){
+      window.location = "/users/sign_in";
     }
   });
 }

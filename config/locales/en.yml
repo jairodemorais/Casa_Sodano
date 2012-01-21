@@ -17,4 +17,15 @@ en:
   cart: "SHOPPING"
   shopping: "CART"
   product_added: "Products added:"
+  previous: previous
+  next: next
+  forgot_pasword: forgot your password?
+  password: password
+  password_confirmation: confirm your password
+  product: Product
+  price: Price
+  quantity: Quantity
+  total: Total
+  image: Image
+  empty_cart: Your cart is empty.
 

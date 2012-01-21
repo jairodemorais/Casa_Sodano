@@ -5,9 +5,9 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     if params[:category_id]
-      @items = Item.by_category params[:category_id]
+      @items = Item.by_category(params[:category_id]).paginate(:page => params[:page], :per_page => 6)
     else
-      @items = Item.all.sample(6)
+      @items = Item.paginate(:page => params[:page], :per_page => 6)
     end
     
     @news = News.all.sample(5)

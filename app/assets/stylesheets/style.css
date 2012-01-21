@@ -5,8 +5,9 @@ padding:0px
 ul{list-style: none;}
 img{border:0px}
 a, a:visited, a:link, a:hover{
-  color:white;
+  color:#333;
   text-decoration:none;
+  font-size: 14px;
 }
 html{
 width:100%;
@@ -17,8 +18,14 @@ width:100%;
 .description, table{
   font-size: 12px;
   font-style: normal;
-  float:left;
+  width:100%;
   margin-top: 5px;
+  text-align: center;
+  border-collapse: collapse;
+  color:#666;
+}
+table tr td{
+  border-bottom: 1px solid #ccc;
 }
 .send{
   float:right;
@@ -29,6 +36,10 @@ margin:auto;
 color:white;
 font-family: 'PT Sans', sans-serif;
 font-style:italic;
+}
+#menu a{
+  color: white;
+  text-decoration: none;
 }
 #content form{
   color: #333;
@@ -255,17 +266,20 @@ color:#333;
 line-height:25px;
 float:left;
 }
+#top_paginator .pagination {
+  float: right;
+}
+#top_paginator .pagination a, #bottom_paginator .pagination a{
+  color: #333;
+}
+#top_paginator .pagination em, #bottom_paginator .pagination em{
+  color: red;
+}
 #top_paginator{
 border-bottom: 1px solid #999;
 }
 #bottom_paginator{
 border-top: 1px solid #999;
-}
-#top_paginator span, #bottom_paginator span{
-float:right;
-}
-.items{
-
 }
 .border{
 border-right: 1px solid #999;
@@ -408,6 +422,12 @@ bottom: 0px;
 background-attachment:scroll;
 margin-left: 870px;
 }
+#sign_in_container {
+float: left;
+}
+#sign_in_container div{
+margin-top: 10px;
+}
 #footer{
 float:left;
 margin:4px 0 0 0;
@@ -416,6 +436,10 @@ background:url(footer_background.png) repeat-x;
 height:150px;
 width:100%;
 font-style: normal;
+}
+#footer a{
+  color:white;
+  font-size: 11px;
 }
 #footer ul{
   float: left;

@@ -1,6 +1,6 @@
 <div class="header"><%=t(:articles_title)%></div>
 <div id="top_paginator">
-	<span>1|2|3|ultima pagina</span>
+	<%= will_paginate(@items, :previous_label => t(:previous), :next_label => t(:next)) %>
 </div>
 <div class="items">
 	<% @items.each_with_index do |item, index| %>
@@ -23,7 +23,7 @@
 	<% end %>
 </div>
 <div id="bottom_paginator" class="clear">
-	<span>1|2|3|ultima pagina</span>
+	<%= will_paginate(@items) %>
 </div>		
 <% if session[:login] == 1 %>
 	<%= link_to 'New Item', new_item_path %>

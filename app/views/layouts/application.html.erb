@@ -58,7 +58,7 @@
 		<div class="cart">
 			<div class="cartTitle"><%=t(:cart)%></div>
 			<div class="cartTitle"><%=t(:shopping)%></div> 
-			<div class="cartSubtTitle"><%=t(:product_added)%> <font id='cartQuantity'><%= @cart_quantity%></font></div>
+			<div class="cartSubtTitle"><%=t(:product_added)%> <font id='cartQuantity'><%= @cart_quantity.nil? ? 0 : @cart_quantity%></font></div>
 		</div>
 	</div>
 	<div id="rightEar"></div>
