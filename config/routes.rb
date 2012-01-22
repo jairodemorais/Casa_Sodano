@@ -20,6 +20,7 @@ SodanoStore::Application.routes.draw do
     member do
       post 'add'
       get 'checkout'
+      get 'product_reserves'
     end
   end
   devise_for :users

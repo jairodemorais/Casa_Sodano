@@ -1,25 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%=t(:title)%>:</b>
   <%= @item.title %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%=t(:description)%>:</b>
   <%= @item.description %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b><%=t(:price)%>:</b>
   <%= @item.price %>
 </p>
 
 <p>
-  <b>Image url:</b>
-  <%= @item.photo %>
+  <img src="/assets/products/<%=@item.url_image%>" height="100" width="110" />
 </p>
-
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', item_path %>
+<%= link_to t(:back), :controller => :items %>

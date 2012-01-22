@@ -9,23 +9,51 @@ en:
   home: "Home"
   contact_us: "Contact us"
   about_us: "About us"
+  shopping_cart: "My cart"
   register: "Sign up"
   sign_in: "Sign in"
-  shopping_cart: "My cart"
   best_expirience: "The best experiences" 
   home_articles: "In home articles"
   cart: "SHOPPING"
   shopping: "CART"
   product_added: "Products added:"
+  out_door: "Outdoor"
+  audio: "Audio"
+  kids: "Kids"
+  kitchen: "Kitchen"
+  personal_care: "Personal Care"
+  newsletter: "Newsletter"
+  send: "Send"
+  articles_title: "Articles"
+  appliances: "Appliances"
+  electronic: "Electronic"
+  fitness: "Fitness"
+  white_line: :"White Line"
+  cold_hot: "Cold/Hot"
+  music: "Music"
+  wheeled: "Wheeled"
+  furniture: "Furniture"
+  telephony: "Telephony"
+  tv_video: "Tv Video"
+  more_info: "+info"
+  add_to_cart: "Add cart"
+  find_us: "Find us!"
+  contact_us_desc: "Make your questions, you'll get an answer soon."
+  send: "Send"
+  about_us_desc: "About us"
   previous: previous
   next: next
   forgot_pasword: forgot your password?
   password: password
   password_confirmation: confirm your password
+  title: Producto
+  description: Descripción
+  imageUrl: Imagen
   product: Product
   price: Price
   quantity: Quantity
   total: Total
   image: Image
   empty_cart: Your cart is empty.
-
+  edit: edit
+  back: back

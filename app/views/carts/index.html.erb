@@ -1,45 +1,47 @@
 <div class="header"><%=t(:shopping_cart)%></div>
 <div id="sign_in_container">
 <% if @cart.cart_items.empty? %>
-	<p> <%=t(:empty_cart)%> </p>
-<% end %>
+  <div> <%=t(:empty_cart)%> </div>
+<% else %>
 
 <% total = 0 %>
 
 <table>
-	<tr>
-		<td class= "legend"style="width:10%"><%=t(:image)%></td>
-		<td class="legend" style="width:50%"><%=t(:product)%></td>
-		<td class="legend" style="width:10%"><%=t(:price)%></td>
-		<td class="legend" style="width:10%"> <%=t(:quantity)%></td>
-		<td class="legend" style="width:20%"><%=t(:total)%></td>
-	</tr>
-	<% @cart.cart_items.each do |cart_item| %>
-		<% item = cart_item.item %>
-		<tr>
-			<td>
-				<div class="image">
-					<img src="assets/products/<%=item.url_image%>" height="40" width="40" />
-				</div>
-			</td>
-			<td class="title"><%= link_to item.title, item %></td>
-			<td class="price"><%= number_to_currency(item.price) %></td>
-			<td class="quantity"><%= cart_item.quantity %><br /></td>
-			<td class="price">
-			  <%= number_to_currency(cart_item.quantity * cart_item.price) %>
-			</td>
-	  </tr>
-		<% total += cart_item.quantity * cart_item.price %>
-	<% end %>
-		<tr>
-			<td colspan='4'></td>
-			<td>
-				<div class="price"> <%= number_to_currency (total) %> </div>
-			</td>
-		</tr>
+  <tr>
+    <td class= "legend"style="width:10%"><%=t(:image)%></td>
+    <td class="legend" style="width:50%"><%=t(:product)%></td>
+    <td class="legend" style="width:10%"><%=t(:price)%></td>
+    <td class="legend" style="width:10%"> <%=t(:quantity)%></td>
+    <td class="legend" style="width:20%"><%=t(:total)%></td>
+  </tr>
+  <% @cart.cart_items.each do |cart_item| %>
+    <% item = cart_item.item %>
+    <tr>
+      <td>
+        <div class="image">
+          <img src="assets/products/<%=item.url_image%>" height="40" width="40" />
+        </div>
+      </td>
+      <td class="title"><%= link_to item.title, item %></td>
+      <td class="price"><%= number_to_currency(item.price) %></td>
+      <td class="quantity"><%= cart_item.quantity %><br /></td>
+      <td class="price">
+        <%= number_to_currency(cart_item.quantity * cart_item.price) %>
+      </td>
+    </tr>
+    <% total += cart_item.quantity * cart_item.price %>
+  <% end %>
+    <tr>
+      <td colspan='4'></td>
+      <td>
+        <div class="price"> <%= number_to_currency (total) %> </div>
+      </td>
+    </tr>
 </table>
 
-<p> <%= link_to 'Eliminar Carrito', :action => :checkout , :id => @cart%> |
-		<%= link_to 'Continuar comprando', :controller => :items %> |
-		<%= link_to 'Confirmar reserva', :controller => :items %>
+<p> <%= link_to 'Eliminar Carrito', :action => :checkout, :id => @cart%> |
+    <%= link_to 'Continuar comprando', :controller => :items %> |
+    <%= link_to 'Confirmar reserva',  :action => :product_reserves, :id => @cart %>
+</p>
+<% end %>
 </div>

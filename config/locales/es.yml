@@ -46,9 +46,14 @@ es:
   forgot_password: Olvidaste tu contraseña?
   password: contraseña
   password_confirmation: Confirme su contraseña
+  title: Producto
+  description: Descripción
+  imageUrl: Imagen
   product: Producto
   price: Precio
   quantity: Cantidad
   total: Total
   image: Imagen
   empty_cart: Tu carrito de compras esta vacio.
+  edit: editar
+  back: atras
