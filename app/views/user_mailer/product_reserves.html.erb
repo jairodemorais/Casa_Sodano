@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="legend" style="width:50%"><%=t(:product)%></td>
+        <td class="legend" style="width:10%"><%=t(:price)%></td>
+        <td class="legend" style="width:10%"> <%=t(:quantity)%></td>
+        <td class="legend" style="width:20%"><%=t(:total)%></td>
+      </tr>
+      <% total = 0 %>
+      <% @cart.cart_items.each do |cart_item| %>
+        <% item = cart_item.item %>
+        <tr>
+          <td class="title"><%= link_to item.title, item %></td>
+          <td class="price"><%= number_to_currency(item.price) %></td>
+          <td class="quantity"><%= cart_item.quantity %><br /></td>
+          <td class="price">
+          <%= number_to_currency(cart_item.quantity * cart_item.price) %>
+        </td>
+      </tr>
+      <% total += cart_item.quantity * cart_item.price %>
+      <% end %>
+      <tr>
+        <td colspan='3'></td>
+        <td>
+          <div class="price"> <%= number_to_currency (total) %> </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
