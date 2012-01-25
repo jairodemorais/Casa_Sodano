@@ -1,4 +1,4 @@
-function addToCart(itemId){
+function addToCart(itemId, title){
   $.ajax({
     type: 'POST',
     url: "/carts/"+itemId+"/add",
@@ -6,10 +6,11 @@ function addToCart(itemId){
       withCredentials: true
     },
     success: function(){
-      $('#cartQuantity').text(parseInt($('#cartQuantity').text())+1);
+      showMessage('success', 'Felicitaciones','El producto "'+title+'" ha sido agregado al carrito de compras.');
     },
     error: function(error){
       window.location = "/users/sign_in";
+      showMessage('error', 'Lo lamentamos', 'Hubo un error, vuelva a intentarlo nuevamente');
     }
   });
 }

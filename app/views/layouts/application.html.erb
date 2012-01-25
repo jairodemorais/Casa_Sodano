@@ -6,14 +6,22 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Casa Sodano</title>
   <%= stylesheet_link_tag 'style' %>
+  <%= stylesheet_link_tag 'notificator' %>
   <%= javascript_include_tag 'jquery'%>
   <%= javascript_include_tag 'cart'%>
   <%= javascript_include_tag 'item'%>
   <%= javascript_include_tag 'photoSlider'%>
+  <%= javascript_include_tag 'notificator'%>
   <script>
     $(document).ready(function() { 
        $('#s3slider').s3Slider({ 
           timeOut: 4000 
+       });
+       // Initially, hide all notification messages
+       hideAllMessages();
+       // When message is clicked, hide it
+       $('#message').click(function(){
+         $(this).animate({top: -$(this).outerHeight()}, 500);
        });
     });
   </script>
@@ -97,6 +105,10 @@
             </li>
             <div class="clear s3sliderImage"></div>
          </ul>
+      </div>
+      <div id="message" class="error message">
+        <h3>Ups, an error ocurred</h3>
+        <p>This is just an error notification message.</p>
       </div>
       <div class="content">
       <%= yield %>

@@ -15,7 +15,7 @@
     
     <span><%= number_to_currency(item.price, :precision => 0, :separator => ",", :delimiter => "") %></span>
      <td><%= link_to t(:more_info), item %></td>
-    <input type="button" onclick="addToCart(<%=item.id%>);" value="<%=t(:add_to_cart)%>" class="buy_button">
+    <input type="button" onclick="addToCart(<%=item.id%>, '<%=item.title%>');" value="<%=t(:add_to_cart)%>" class="buy_button">
   </div>
   <% if (index+1) % 3 == 0 %>
   <div class="separator"></div>
