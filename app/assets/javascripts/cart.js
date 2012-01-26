@@ -7,6 +7,7 @@ function addToCart(itemId, title){
     },
     success: function(){
       showMessage('success', 'Felicitaciones','El producto "'+title+'" ha sido agregado al carrito de compras.');
+      $('#cartQuantity').text(parseInt($('#cartQuantity').text())+1);
     },
     error: function(error){
       window.location = "/users/sign_in";
