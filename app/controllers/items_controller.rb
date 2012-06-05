@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
   # GET /items/new.json
   def new
     @item = Item.new
-    p @item.inspect
+    @categories = Category.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @item }
@@ -49,10 +49,10 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(params[:item])
-
+    puts params[:item].inspect
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to @item, notice: 'El producto ha sido creado exitosamente.' }
         format.json { render json: @item, status: :created, location: @item }
       else
         format.html { render action: "new" }
@@ -68,7 +68,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to @item, notice: 'El producto ha sido actualizado.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

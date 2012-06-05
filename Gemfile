@@ -25,7 +25,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
@@ -37,5 +37,5 @@ end
 group :test, :development do
   # Pretty printed test output
   gem 'turn', :require => false
-  gem 'sqlite3'
+  gem 'mysql2'
 end

@@ -8,7 +8,7 @@
     <div class="title"><%= item.title.upcase%></div>
     <div class="code">Cod > <%=item.id%></div>
     <%if true then %>
-      <img src="assets/products/<%=item.url_image%>" height="100" width="110" />
+      <%= image_tag item.photo.url(:medium) %>
     <% else %>
       no photo 
     <% end %>

@@ -6,5 +6,7 @@ class Item < ActiveRecord::Base
     has_attached_file :photo,
       :styles => {
         :thumb=> "50x45#",
-        :medium => "110x100>"}
+        :medium => "110x100>",
+        :large =>  "200x200>}"
+      }
 end

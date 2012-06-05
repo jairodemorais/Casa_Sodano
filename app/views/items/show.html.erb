@@ -16,6 +16,6 @@
 </p>
 
 <p>
-  <img src="/assets/products/<%=@item.url_image%>" height="100" width="110" />
+  <%= image_tag @item.photo.url(:large) %>
 </p>
 <%= link_to t(:back), :controller => :items %>
